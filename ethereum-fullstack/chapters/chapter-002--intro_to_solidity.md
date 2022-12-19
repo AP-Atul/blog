@@ -149,7 +149,7 @@ contract SimpleToken {
 
 More in details [types](https://docs.soliditylang.org/en/v0.8.17/types.html)
 
-```solidity
+```
 bool b = true, false;
 int, uint = int8 -> int256, uint8 -> uint256;
 address 
