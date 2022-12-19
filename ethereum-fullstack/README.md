@@ -5,4 +5,3 @@
 - [Project we are building](/ethereum-fullstack/chapters/chapter-003--intro-to-project.md)
 - [Building the contract](/ethereum-fullstack/chapters/chapter-004--building-the-contract.md)
 - [Testing the contract](/ethereum-fullstack/chapters/chapter-005--testing-the-contract.md)
-
