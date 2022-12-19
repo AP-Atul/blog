@@ -8,8 +8,8 @@ describe("DMCToken", () => {
 
   const deployFixture = async () => {
     const [owner, otherAccount] = await ethers.getSigners();
-    const Lock = await ethers.getContractFactory("DMCToken");
-    const dmcToken = await Lock.connect(owner).deploy(); // connecting owner to contract
+    const DMCToken = await ethers.getContractFactory("DMCToken");
+    const dmcToken = await DMCToken.connect(owner).deploy(); // connecting owner to contract
     return { dmcToken, owner, otherAccount };
   }
 
