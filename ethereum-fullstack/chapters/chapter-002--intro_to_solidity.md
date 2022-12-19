@@ -53,7 +53,8 @@ multiline comment
 
 1. State Variables
 
-This are variables whose values are permanently stored in contract storage. See [visibility](https://docs.soliditylang.org/en/v0.8.17/contracts.html#visibility-and-getters)
+These are variables whose values are permanently stored in contract storage.
+See [visibility](https://docs.soliditylang.org/en/v0.8.17/contracts.html#visibility-and-getters)
 for more info on visibility of variables.
 
 ```solidity
@@ -64,7 +65,8 @@ contract SimpleStorage {
 
 2. Functions
 
-These are executable piece of code. They are usually defined inside a contract, but can also be defined outside contracts
+These are executable piece of code. They are usually defined inside a contract, but can also be defined outside
+contracts
 which can be used to build libraries.
 
 ```solidity
@@ -100,7 +102,7 @@ contract SimpleSecure {
 }
 ```
 
-In the above contract we defined a modifier `onlyOwner` that is resposible to check if `msg.sender` which is the 
+In the above contract we defined a modifier `onlyOwner` that is resposible to check if `msg.sender` which is the
 account of the person who initiated the transaction, to be equal to `owner`'s address. Due to the `onlyOwner` modifier
 only the owner can call the function `purchase()`.
 
@@ -111,7 +113,7 @@ Events provider a way to log values in EVM.
 ```solidity
 contract SimpleEvent {
     event Mint(address owner, uint token);
-    
+
     function mint() public payable {
         emit Mint(msg.sender, 1);
     }
