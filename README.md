@@ -1,4 +1,4 @@
 ### Table of Contents
 
-- [Ethereum FullStack](/ethreum-fullstack)
+- [Ethereum FullStack](/ethereum-fullstack)
 
