@@ -86,3 +86,36 @@ future references.
 ```
 npm run build
 ```
+
+5. Deploy the subgraph to the hosted service
+Register on the [graph](https://thegraph.com/hosted-service). Get the `access token` from the [Dashboard](https://thegraph.com/hosted-service/dashboard)
+Login from the cli to add the deployment key
+```
+graph auth 
+> select hosted-service
+> paste the access token
+```
+
+Create new subgraph project on the graph by clicking `Add subgraph` button. Fill in the details.
+The name of the new subgraph should be `dmc-token`. Once it is done we can deploy from the command line
+as below
+
+```
+npm run deploy
+# OR
+graph deploy --product hosted-service ap-atul/dmc-token
+```
+
+6. Once the subgraph is deployed you can see the indexing status, once the indexer finishes indexing 
+we can use the playground to test. Go to the playground and run following query
+
+```graphql
+{
+  transfers {
+      from
+      to
+      blockTimestamp
+  }
+}
+```
+
