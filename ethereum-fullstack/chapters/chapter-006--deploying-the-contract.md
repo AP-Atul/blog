@@ -62,3 +62,32 @@ DMCToken deployed to 0x5FbDB2315678afecb367f032d93F642f64180aa3
 
 Congratulations you have successfully deployed to localhost.
 
+### Deploy the polygon testnet
+
+1. Update the `.env` with one of your real accounts from metamask. 
+2. Add `TESTNET_RPC` to `.env` with the url from Alchemy dashboard.
+3. Update the `hardhat.config.ts` file with the testnet values
+```ts
+const config: HardhatUserConfig = {
+  solidity: "0.8.17",
+  networks: {
+    localhost: {
+      url: "http://127.0.0.1:8545/",
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    testnet: {
+      url: process.env.TESTNET_RPC,
+      accounts: [process.env.PRIVATE_KEY],
+    }
+  }
+};
+```
+4. Deploy the contract running the deployment script
+
+```
+npx hardhat run scripts/deploy.ts --network testnet
+
+# it will output the address like so
+DMCToken deployed to 0x841Aaf3Bbac6bFEcD6Ed7eDC7006b86dDD57E7F3
+
+```

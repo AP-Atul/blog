@@ -1,10 +1,4 @@
-# Simple Token
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+## Deployment Details
+```
+Mumbai Testnet: 0x841Aaf3Bbac6bFEcD6Ed7eDC7006b86dDD57E7F3
 ```
